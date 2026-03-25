@@ -72,3 +72,17 @@ Google (Search stays ready)
 
 ## 📬 Let's Connect
 This project is part of my continuous journey in Mastering Full-Stack Development. Feel free to fork it and add your own "Loot."
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License**. 
+
+**Summary:** You are free to use, copy, modify, and distribute this software for personal or commercial purposes, provided that the original copyright notice and this permission notice are included in all copies or substantial portions of the Software.
+
+> See the [LICENSE](./LICENSE) file for the full legal text.
+
+---
+
+### 🛠️ Built by Sidra
+*A personal exploration into Chrome Extension architecture and system optimization.*
