@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Graveyard ⚰️",
+  "version": "1.4",
+  "description": "Bury your dead tabs. Save your memory.",
+  "permissions": ["tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "32": "icons/icon32.png",
+      "34": "icons/icon34.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "32": "icons/icon32.png",
+    "34": "icons/icon34.png",
+    "128": "icons/icon128.png"
+  }
+}

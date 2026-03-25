@@ -1,0 +1,277 @@
+/* --- Gen-Z Aesthetics Config --- */
+:root {
+  --bg-dark: #121212; /* Deep void black */
+  --bg-card: #1E1E1E; /* Elevated black for cards */
+  --accent-purple: #BB86FC; /* Neon purple */
+  --accent-purple-hover: #D7BFFF; /* Lighter neon hover */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --danger-red: #CF6679; /* Soft neon red */
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* --- Base Styles --- */
+body {
+  width: 320px; /* Slightly wider for modern layout */
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow: hidden;
+}
+
+.main-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- Header & Typography --- */
+header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.logo-text span {
+  font-weight: 400;
+  color: var(--accent-purple);
+  opacity: 0.8;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 4px 0 0;
+}
+
+/* --- Modern Card Style --- */
+.stats-card {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Very subtle border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#tab-status {
+  font-size: 14px;
+  color: var(--accent-purple);
+  margin: 0;
+}
+
+/* --- Neomorphic / Glass Button --- */
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent-purple), #6200EE);
+  color: #121212; /* Dark text on bright button for contrast */
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 30px; /* Fully rounded 'pill' button */
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 16px rgba(187, 134, 252, 0.3); /* Subtle neon glow */
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 8px 20px rgba(187, 134, 252, 0.5);
+}
+
+.primary-btn:active {
+  transform: translateY(1px); /* Click feedback */
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+:root {
+  --bg: #0a0a0c;
+  --card-bg: #16161a;
+  --accent: #bc13fe; /* Neon Purple */
+  --accent-glow: rgba(188, 19, 254, 0.4);
+  --text-main: #ffffff;
+  --text-dim: #8e8e93;
+}
+
+body {
+  width: 320px;
+  min-height: 200px; /* Gives it a base height */
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Space Grotesk', sans-serif;
+  display: block; /* Ensures it calculates height correctly */
+}
+
+.app-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden { display: none !important; }
+
+#tab-list-container {
+  width: 100%;
+  max-height: 150px; 
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid rgba(188, 19, 254, 0.3);
+}
+
+#tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-item {
+  font-size: 11px;
+  padding: 8px;
+  color: var(--text-main);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left; /* Make sure text isn't centered */
+}
+
+/* Header Section */
+header { text-align: center; margin-bottom: 20px; }
+.logo-icon { font-size: 32px; margin-bottom: 5px; }
+h1 { font-size: 18px; letter-spacing: 2px; margin: 0; font-weight: 700; }
+.accent { color: var(--accent); text-shadow: 0 0 10px var(--accent-glow); }
+.tagline { font-size: 11px; color: var(--text-dim); margin-top: 5px; }
+
+/* Stats Box - The Glassmorphism look */
+.stats-box {
+  background: var(--card-bg);
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#tab-count { font-size: 36px; font-weight: 700; color: var(--text-main); }
+label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); }
+
+/* The "Main" Button */
+.main-btn {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.main-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.main-btn:active { transform: translateY(0); }
+
+/* Footer tags */
+footer { margin-top: 15px; text-align: center; }
+footer p {
+  font-size: 11px;
+  color: var(--text-dim);
+  display: flex;         /* Enables Flexbox */
+  flex-wrap: wrap;       /* Allows tags to drop to the next line if they run out of space */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;              /* Adds consistent space between every tag */
+  margin-top: 15px;
+  line-height: 1.6;      /* Increases height between rows so tags don't touch vertically */
+}
+
+.site-tag {
+  background: #252529;
+  padding: 4px 10px;     /* More horizontal padding looks more "pill-like" */
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--accent);  /* Makes the whitelisted sites pop */
+  border: 1px solid rgba(188, 19, 254, 0.2); /* Subtle neon border */
+  white-space: nowrap;   /* Prevents a single tag name from breaking in half */
+}
+
+.hidden { display: none; }
+
+#tab-list-container {
+  width: 100%;
+  max-height: 150px; /* Limits height so it doesn't break the popup */
+  overflow-y: auto;  /* Adds scrollbar if you have 50+ tabs */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-item {
+  font-size: 11px;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." if the title is too long */
+}
+
+.tab-item:last-child { border-bottom: none; }
+
+/* Custom Scrollbar for that Gen-Z look */
+#tab-list-container::-webkit-scrollbar { width: 4px; }
+#tab-list-container::-webkit-scrollbar-thumb { 
+  background: var(--accent); 
+  border-radius: 10px; 
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px var(--accent-glow); }
+  50% { box-shadow: 0 0 15px var(--accent-glow); }
+  100% { box-shadow: 0 0 5px var(--accent-glow); }
+}
+
+/* Add this new state class */
+.has-dead-tabs {
+  border: 2px solid var(--accent) !important;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
