@@ -43,7 +43,9 @@ TAB_GRAVE/
 ├── popup.html        # The skeleton (Structure)
 ├── popup.js          # The muscle (Logic & API calls)
 └── styles.css        # The skin (Glassmorphism & Neon)
-🚀 Local Deployment
+```
+---
+## 🚀 Local Deployment
 For personal use or testing:
 
 Clone this repository to your local machine.
@@ -55,8 +57,9 @@ Toggle Developer mode (top-right).
 Select Load unpacked and choose the TAB_GRAVE folder.
 
 Pin the ⚰️ and experience the speed.
+---
 
-🛡️ Protected Zones (Whitelist)
+## 🛡️ Protected Zones (Whitelist)
 To prevent workflow disruption, the following sites are hardcoded as "Immortal":
 
 GitHub (Code stays alive)
@@ -66,6 +69,7 @@ YouTube (Music stays playing)
 WhatsApp/Web (Communications stay active)
 
 Google (Search stays ready)
+---
 
-📬 Let's Connect
+## 📬 Let's Connect
 This project is part of my continuous journey in Mastering Full-Stack Development. Feel free to fork it and add your own "Loot."
