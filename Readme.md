@@ -57,7 +57,7 @@ Toggle Developer mode (top-right).
 Select Load unpacked and choose the TAB_GRAVE folder.
 
 Pin the ⚰️ and experience the speed.
----
+
 
 ## 🛡️ Protected Zones (Whitelist)
 To prevent workflow disruption, the following sites are hardcoded as "Immortal":
@@ -69,7 +69,6 @@ YouTube (Music stays playing)
 WhatsApp/Web (Communications stay active)
 
 Google (Search stays ready)
----
 
 ## 📬 Let's Connect
 This project is part of my continuous journey in Mastering Full-Stack Development. Feel free to fork it and add your own "Loot."
