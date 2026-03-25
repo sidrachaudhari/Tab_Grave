@@ -1,44 +1,7 @@
-// async function updateCount() {
-//   const whitelist = ['youtube.com', 'github.com', 'google.com', 'whatsapp.com'];
-  
-//   try {
-//     const allTabs = await chrome.tabs.query({ currentWindow: true });
-//     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-//     const deadTabs = allTabs.filter(tab => {
-//       const isCurrent = tab.id === activeTab.id;
-//       const isSafe = whitelist.some(site => tab.url && tab.url.includes(site));
-//       return !isCurrent && !isSafe;
-//     });
-
-//     // Update the Big Number
-//     const countDisplay = document.getElementById('tab-count');
-//     if (countDisplay) countDisplay.innerText = deadTabs.length;
-
-//     // Build the List
-//     const listElement = document.getElementById('tab-list');
-//     if (listElement) {
-//       listElement.innerHTML = ''; // Clear old list
-//       deadTabs.forEach(tab => {
-//         const li = document.createElement('li');
-//         li.className = 'tab-item';
-//         li.innerText = `👻 ${tab.title || 'Untitled Tab'}`;
-//         listElement.appendChild(li);
-//       });
-//     }
-    
-//     console.log("Dead tabs found:", deadTabs.length);
-//   } catch (error) {
-//     console.error("Error updating tabs:", error);
-//   }
-// }/**
-//  * TAB GRAVEYARD - CORE LOGIC
-//  */
-
-// 1. The "Source of Truth" for Whitelisted sites
+// 1. Will never die
 const WHITELIST = ['youtube.com', 'github.com', 'google.com', 'whatsapp.com', 'web.whatsapp.com'];
 
-// 2. Function to refresh the UI (Numbers and the Ghost List)
+// 2. Function to refresh the UI
 async function updateUI() {
   try {
     const allTabs = await chrome.tabs.query({ currentWindow: true });
@@ -51,14 +14,14 @@ async function updateUI() {
       return !isCurrent && !isSafe;
     });
 
-    // Update the Big Number
+    // tab-count update 
     const countDisplay = document.getElementById('tab-count');
     if (countDisplay) countDisplay.innerText = deadTabs.length;
 
-    // Build the "Ghost List"
+    // show the tabs that are ready to be buried
     const listElement = document.getElementById('tab-list');
     if (listElement) {
-      listElement.innerHTML = ''; // Clear old list
+      listElement.innerHTML = '';
       deadTabs.forEach(tab => {
         const li = document.createElement('li');
         li.className = 'tab-item';
@@ -76,11 +39,9 @@ async function updateUI() {
 // 3. Initialize everything when the popup opens
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Tab Graveyard Initialized ⚰️");
-  
-  // Initial UI Load
+
   updateUI();
 
-  // TOGGLE LIST: When user clicks the stats box
   const statsTrigger = document.getElementById('stats-trigger');
   if (statsTrigger) {
     statsTrigger.addEventListener('click', () => {
@@ -89,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // BURY BUTTON: The main action
+  // BURY BUTTON
   const cleanButton = document.getElementById('clean-tabs');
   if (cleanButton) {
     cleanButton.addEventListener('click', async () => {
@@ -97,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const allTabs = await chrome.tabs.query({ currentWindow: true });
         const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-        // Identify IDs to remove
+        // Filter Logic: to identify IDs to remove
         const ids = allTabs
           .filter(tab => tab.id !== activeTab.id && !WHITELIST.some(site => tab.url && tab.url.includes(site)))
           .map(tab => tab.id);
@@ -105,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ids.length > 0) {
           await chrome.tabs.remove(ids);
           console.log(`Burying ${ids.length} tabs...`);
-          updateUI(); // Refresh UI after closing
+          updateUI();
         }
       } catch (error) {
         console.error("Error during burial:", error);
