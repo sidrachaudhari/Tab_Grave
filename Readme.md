@@ -47,7 +47,7 @@ TAB_GRAVE/
 ---
 ## 🚀 Local Deployment
 For personal use or testing:
-
+---
 Clone this repository to your local machine.
 
 Navigate to chrome://extensions/ in your browser.
@@ -61,7 +61,7 @@ Pin the ⚰️ and experience the speed.
 
 ## 🛡️ Protected Zones (Whitelist)
 To prevent workflow disruption, the following sites are hardcoded as "Immortal":
-
+---
 GitHub (Code stays alive)
 
 YouTube (Music stays playing)
